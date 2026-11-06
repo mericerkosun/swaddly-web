@@ -1,0 +1,117 @@
+/* Swaddly renkleri (uygulama deposundaki DESIGN.md §2). Yazı tipi dışarıdan
+   yüklenmez: ziyaretçinin bilgisi üçüncü tarafa gitmesin. */
+:root {
+  color-scheme: light dark;
+  --background: #faf7f3;
+  --surface: #f1ebe4;
+  --border: #e4dbd2;
+  --text: #221c18;
+  --text-muted: #6e645c;
+  --accent: #a9573a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141110;
+    --surface: #221c19;
+    --border: #3a322c;
+    --text: #f3ede7;
+    --text-muted: #a89c92;
+    --accent: #e3936f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font: 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+a {
+  color: var(--accent);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.2px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Beyaz PNG simge, vurgu rengiyle boyanır (uygulamadaki BrandMark gibi). */
+.brand-mark {
+  width: 21px;
+  height: 28px;
+  background: var(--accent);
+  mask: url("logo-mark.png") center / contain no-repeat;
+  -webkit-mask: url("logo-mark.png") center / contain no-repeat;
+}
+
+h1 {
+  margin: 40px 0 8px;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+}
+
+h2 {
+  margin: 32px 0 8px;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.languages {
+  font-size: 15px;
+}
+
+.card {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.card p:first-child {
+  margin-top: 0;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.email {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+hr {
+  margin: 48px 0 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+footer {
+  margin-top: 48px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
