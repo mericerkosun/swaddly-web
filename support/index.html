@@ -7,14 +7,19 @@
   <meta name="description" content="Contact Swaddly, report misuse and get help with purchases.">
   <link rel="icon" href="../favicon.png">
   <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/lang.js"></script>
 </head>
 <body>
 <main>
-  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+  <header class="top">
+    <a class="brand" href="../" data-keep-lang><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+    <nav class="languages" aria-label="Language · Dil">
+      <a href="#en" hreflang="en" data-switch>English</a>
+      <a href="#tr" hreflang="tr" lang="tr" data-switch>Türkçe</a>
+    </nav>
+  </header>
 
-  <p class="languages"><a href="#en">English</a> · <a href="#tr">Türkçe</a></p>
-
-  <section id="en">
+  <section data-lang="en">
     <h1>Support</h1>
     <p class="muted">Help with the Swaddly Android app.</p>
 
@@ -34,12 +39,12 @@
     <p>Credits are bought through Google Play, and Google handles the payment. To ask for a refund, follow <a href="https://support.google.com/googleplay/answer/2479637">Google Play’s refund steps</a>. If a refund is approved, the credits from that purchase are removed from your balance.</p>
 
     <h2>Delete your account</h2>
-    <p>See <a href="../delete-account/">how to delete your account</a>, in the app or by email.</p>
+    <p>See <a href="../delete-account/#en">how to delete your account</a>, in the app or by email.</p>
   </section>
 
-  <hr>
+  <hr class="lang-divider">
 
-  <section id="tr" lang="tr">
+  <section lang="tr" data-lang="tr">
     <h1>Destek</h1>
     <p class="muted">Swaddly Android uygulaması için yardım.</p>
 
@@ -62,8 +67,11 @@
     <p>Uygulamadan ya da e-postayla <a href="../delete-account/#tr">hesabını nasıl sileceğini</a> gör.</p>
   </section>
 
-  <footer>
-    <a href="../delete-account/">Delete account · Hesabı sil</a> · <a href="../privacy/">Privacy · Gizlilik</a>
+  <footer data-lang="en">
+    <a href="../delete-account/#en">Delete your account</a> · <a href="../privacy/#en">Privacy policy</a>
+  </footer>
+  <footer data-lang="tr" lang="tr">
+    <a href="../delete-account/#tr">Hesabını sil</a> · <a href="../privacy/#tr">Gizlilik politikası</a>
   </footer>
 </main>
 </body>

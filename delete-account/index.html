@@ -7,14 +7,19 @@
   <meta name="description" content="How to delete your Swaddly account and what happens to your data.">
   <link rel="icon" href="../favicon.png">
   <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/lang.js"></script>
 </head>
 <body>
 <main>
-  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+  <header class="top">
+    <a class="brand" href="../" data-keep-lang><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+    <nav class="languages" aria-label="Language · Dil">
+      <a href="#en" hreflang="en" data-switch>English</a>
+      <a href="#tr" hreflang="tr" lang="tr" data-switch>Türkçe</a>
+    </nav>
+  </header>
 
-  <p class="languages"><a href="#en">English</a> · <a href="#tr">Türkçe</a></p>
-
-  <section id="en">
+  <section data-lang="en">
     <h1>Delete your Swaddly account</h1>
     <p class="muted">This page explains how to delete your Swaddly account and what happens to your data.</p>
 
@@ -51,9 +56,9 @@
     <p>Portraits you saved or shared stay on your device and wherever you shared them. We can’t delete those.</p>
   </section>
 
-  <hr>
+  <hr class="lang-divider">
 
-  <section id="tr" lang="tr">
+  <section lang="tr" data-lang="tr">
     <h1>Swaddly hesabını sil</h1>
     <p class="muted">Bu sayfa Swaddly hesabını nasıl sileceğini ve verilerine ne olacağını anlatır.</p>
 
@@ -90,8 +95,11 @@
     <p>Kaydettiğin ya da paylaştığın portreler cihazında ve paylaştığın yerlerde kalır. Onları biz silemeyiz.</p>
   </section>
 
-  <footer>
-    <a href="../support/">Support · Destek</a> · <a href="../privacy/">Privacy · Gizlilik</a>
+  <footer data-lang="en">
+    <a href="../support/#en">Support</a> · <a href="../privacy/#en">Privacy policy</a>
+  </footer>
+  <footer data-lang="tr" lang="tr">
+    <a href="../support/#tr">Destek</a> · <a href="../privacy/#tr">Gizlilik politikası</a>
   </footer>
 </main>
 </body>

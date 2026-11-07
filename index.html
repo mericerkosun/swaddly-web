@@ -7,20 +7,39 @@
   <meta name="description" content="Swaddly turns a baby photo into a themed portrait.">
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/lang.js"></script>
 </head>
 <body>
 <main>
-  <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+  <header class="top">
+    <a class="brand" href="./" data-keep-lang><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+    <nav class="languages" aria-label="Language · Dil">
+      <a href="#en" hreflang="en" data-switch>English</a>
+      <a href="#tr" hreflang="tr" lang="tr" data-switch>Türkçe</a>
+    </nav>
+  </header>
 
-  <h1>Swaddly</h1>
-  <p class="muted">An Android app that turns a baby photo into a themed portrait.</p>
-  <p class="muted" lang="tr">Bebek fotoğrafını temalı bir portreye dönüştüren Android uygulaması.</p>
+  <section data-lang="en">
+    <h1>Swaddly</h1>
+    <p class="muted">An Android app that turns a baby photo into a themed portrait.</p>
+    <ul>
+      <li><a href="support/#en">Support</a></li>
+      <li><a href="delete-account/#en">Delete your account</a></li>
+      <li><a href="privacy/#en">Privacy policy</a></li>
+    </ul>
+  </section>
 
-  <ul>
-    <li><a href="support/">Support · Destek</a></li>
-    <li><a href="delete-account/">Delete your account · Hesabını sil</a></li>
-    <li><a href="privacy/">Privacy policy · Gizlilik politikası</a></li>
-  </ul>
+  <hr class="lang-divider">
+
+  <section lang="tr" data-lang="tr">
+    <h1>Swaddly</h1>
+    <p class="muted">Bebek fotoğrafını temalı bir portreye dönüştüren Android uygulaması.</p>
+    <ul>
+      <li><a href="support/#tr">Destek</a></li>
+      <li><a href="delete-account/#tr">Hesabını sil</a></li>
+      <li><a href="privacy/#tr">Gizlilik politikası</a></li>
+    </ul>
+  </section>
 </main>
 </body>
 </html>

@@ -86,8 +86,45 @@ h3 {
   color: var(--text-muted);
 }
 
+/* Üst satır: logo solda, dil seçimi sağda. */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .languages {
-  font-size: 15px;
+  display: flex;
+  flex-shrink: 0;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.languages a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+html[data-lang="en"] .languages a[hreflang="en"],
+html[data-lang="tr"] .languages a[hreflang="tr"] {
+  background: var(--accent);
+  color: var(--background);
+}
+
+/* Seçilmeyen dil gizlenir (assets/lang.js). JavaScript yoksa iki dil de
+   görünür, alt bilgi İngilizce kalır. */
+html[data-lang="en"] [data-lang="tr"],
+html[data-lang="tr"] [data-lang="en"],
+html[data-lang] .lang-divider,
+html:not([data-lang]) footer[data-lang="tr"] {
+  display: none;
 }
 
 .card {

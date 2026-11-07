@@ -7,14 +7,19 @@
   <meta name="description" content="How Swaddly collects, uses, shares and deletes your data.">
   <link rel="icon" href="../favicon.png">
   <link rel="stylesheet" href="../assets/style.css">
+  <script src="../assets/lang.js"></script>
 </head>
 <body>
 <main>
-  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+  <header class="top">
+    <a class="brand" href="../" data-keep-lang><span class="brand-mark" aria-hidden="true"></span>Swaddly</a>
+    <nav class="languages" aria-label="Language · Dil">
+      <a href="#en" hreflang="en" data-switch>English</a>
+      <a href="#tr" hreflang="tr" lang="tr" data-switch>Türkçe</a>
+    </nav>
+  </header>
 
-  <p class="languages"><a href="#en">English</a> · <a href="#tr">Türkçe</a></p>
-
-  <section id="en">
+  <section data-lang="en">
     <h1>Swaddly Privacy Policy</h1>
     <p class="muted">Last updated: 6 November 2026</p>
     <p>This policy explains what data the Swaddly Android app collects, why, who it is shared with, how long it is kept and how you can delete it.</p>
@@ -86,7 +91,7 @@
     <p>All data travels over encrypted connections (HTTPS). Photos and portraits are stored in private storage and opened only through short-lived links. Payment and server keys never reach the app. Only the developer can access the data.</p>
 
     <h2>Children</h2>
-    <p>Swaddly is for adults (parents). It is not directed at children, and children should not use it. If you think a photo of you or your child was used without permission, write to us with the subject “Misuse report” (see <a href="../support/">Support</a>).</p>
+    <p>Swaddly is for adults (parents). It is not directed at children, and children should not use it. If you think a photo of you or your child was used without permission, write to us with the subject “Misuse report” (see <a href="../support/#en">Support</a>).</p>
 
     <h2>Your rights</h2>
     <p>Under KVKK Article 11 you can ask whether we process your data and get information about it; learn why it is processed and whether it is used for that purpose; know who it is shared with in Türkiye or abroad; ask for incomplete or wrong data to be corrected; ask for it to be deleted, and for those it was shared with to be told about corrections or deletion; object to a result against you that comes only from automated analysis; and claim compensation if you suffer damage from unlawful processing.</p>
@@ -94,15 +99,15 @@
     <p>You can withdraw your photo consent at any time by deleting your account or emailing us. Withdrawing doesn’t affect what was done before. Without this consent you can’t create new portraits.</p>
 
     <h2>Deleting your account</h2>
-    <p>In the app: Profile → Delete my account. Without the app: see <a href="../delete-account/">Delete your account</a>.</p>
+    <p>In the app: Profile → Delete my account. Without the app: see <a href="../delete-account/#en">Delete your account</a>.</p>
 
     <h2>Changes</h2>
     <p>If this policy changes, we update the date at the top. If a change affects how your photos are used, we tell you in the app first.</p>
   </section>
 
-  <hr>
+  <hr class="lang-divider">
 
-  <section id="tr" lang="tr">
+  <section lang="tr" data-lang="tr">
     <h1>Swaddly Gizlilik Politikası ve Aydınlatma Metni</h1>
     <p class="muted">Son güncelleme: 6 Kasım 2026</p>
     <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) 10. maddesi uyarınca, Swaddly Android uygulamasının hangi verileri, neden topladığını, kimlerle paylaştığını, ne kadar sakladığını ve nasıl silebileceğini anlatır.</p>
@@ -189,8 +194,11 @@
     <p>Bu metin değişirse en üstteki tarihi güncelleriz. Fotoğraflarının kullanımını etkileyen bir değişikliği önce uygulamada haber veririz.</p>
   </section>
 
-  <footer>
-    <a href="../support/">Support · Destek</a> · <a href="../delete-account/">Delete your account · Hesabını sil</a>
+  <footer data-lang="en">
+    <a href="../support/#en">Support</a> · <a href="../delete-account/#en">Delete your account</a>
+  </footer>
+  <footer data-lang="tr" lang="tr">
+    <a href="../support/#tr">Destek</a> · <a href="../delete-account/#tr">Hesabını sil</a>
   </footer>
 </main>
 </body>
