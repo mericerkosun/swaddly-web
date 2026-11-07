@@ -7,8 +7,7 @@ Swaddly'nin herkese açık sayfaları, GitHub Pages ile yayınlanır:
 |---|---|
 | `support/` | Destek, kötüye kullanım bildirimi, satın alma ve iade |
 | `delete-account/` | Web'den hesap silme (Play Data Safety formundaki bağlantı) |
-
-Gizlilik politikası hukukçu soruları cevaplanınca eklenecek.
+| `privacy/` | Gizlilik politikası ve KVKK aydınlatma metni (uygulama, Play ve Google onay ekranı bağlantısı) |
 
 Düz HTML ve CSS; derleme yok. Renkler uygulama deposundaki `DESIGN.md` ile
 aynı. Yazı tipi dışarıdan yüklenmez.
