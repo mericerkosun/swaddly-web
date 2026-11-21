@@ -89,9 +89,10 @@ h3 {
 /* Üst satır: logo solda, dil seçimi sağda. */
 .top {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px 16px;
 }
 
 .languages {
@@ -105,7 +106,7 @@ h3 {
 }
 
 .languages a {
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 999px;
   color: var(--text-muted);
   font-weight: 600;
@@ -113,18 +114,28 @@ h3 {
 }
 
 html[data-lang="en"] .languages a[hreflang="en"],
-html[data-lang="tr"] .languages a[hreflang="tr"] {
+html[data-lang="tr"] .languages a[hreflang="tr"],
+html[data-lang="ja"] .languages a[hreflang="ja"],
+html[data-lang="ko"] .languages a[hreflang="ko"] {
   background: var(--accent);
   color: var(--background);
 }
 
-/* Seçilmeyen dil gizlenir (assets/lang.js). JavaScript yoksa iki dil de
+/* Seçilmeyen dil gizlenir (assets/lang.js). JavaScript yoksa bütün diller
    görünür, alt bilgi İngilizce kalır. */
-html[data-lang="en"] [data-lang="tr"],
-html[data-lang="tr"] [data-lang="en"],
+html[data-lang]:not([data-lang="en"]) body [data-lang="en"],
+html[data-lang]:not([data-lang="tr"]) body [data-lang="tr"],
+html[data-lang]:not([data-lang="ja"]) body [data-lang="ja"],
+html[data-lang]:not([data-lang="ko"]) body [data-lang="ko"],
 html[data-lang] .lang-divider,
-html:not([data-lang]) footer[data-lang="tr"] {
+html:not([data-lang]) footer[data-lang]:not([data-lang="en"]) {
   display: none;
+}
+
+/* Japonca ve Korece: satır kelime ortasından kırılmasın (Korece boşlukta,
+   Japonca tarayıcının kurallarıyla). */
+[lang="ko"] {
+  word-break: keep-all;
 }
 
 .card {

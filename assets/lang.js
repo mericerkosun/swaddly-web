@@ -1,10 +1,12 @@
-// Dil seçimi: sayfada iki dil de var, yalnızca seçilen görünür (CSS:
-// html[data-lang]). Sıra: adresteki #en / #tr (uygulama böyle açar), yoksa
+// Dil seçimi: sayfadaki dillerden yalnızca seçilen görünür (CSS:
+// html[data-lang]). Sıra: adresteki #en / #tr / #ja / #ko (uygulama böyle açar), yoksa
 // tarayıcının dili. Hiçbir şey saklanmaz. Bölümlerde id yok: adres #tr ile
-// açılınca tarayıcı aşağı kaydırmasın. JavaScript kapalıysa iki dil de görünür.
+// açılınca tarayıcı aşağı kaydırmasın. JavaScript kapalıysa bütün diller görünür.
 (function () {
-  var langs = ['en', 'tr'];
   var root = document.documentElement;
+  // Sayfanın dilleri <html data-langs="en tr">; yoksa hepsi. Sayfada olmayan
+  // bir dil istenirse (ör. gizlilik politikası #ja ile açılınca) İngilizce.
+  var langs = (root.getAttribute('data-langs') || 'en tr ja ko').split(' ');
 
   function fromHash() {
     var hash = location.hash.slice(1);
@@ -12,8 +14,11 @@
   }
 
   function fromBrowser() {
-    var lang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
-    return lang.toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en';
+    var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+    for (var i = 1; i < langs.length; i++) {
+      if (lang.indexOf(langs[i]) === 0) return langs[i];
+    }
+    return 'en';
   }
 
   // Düğmelerin durumu ve dili taşıyan bağlantılar (logo, ana sayfa).
